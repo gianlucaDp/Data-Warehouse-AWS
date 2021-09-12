@@ -13,7 +13,7 @@ REGION = CONFIG.get("S3","REGION")
 
 staging_events_table_drop = "DROP TABLE IF EXISTS s_events;"
 staging_songs_table_drop = "DROP TABLE IF EXISTS s_songs;"
-songplay_table_drop = "DROP TABLE IF EXISTS songplay;"
+songplay_table_drop = "DROP TABLE IF EXISTS songplays;"
 user_table_drop = "DROP TABLE IF EXISTS users;"
 song_table_drop = "DROP TABLE IF EXISTS songs;"
 artist_table_drop = "DROP TABLE IF EXISTS artists;"
@@ -55,7 +55,7 @@ year INT
 );
 """)
 
-songplay_table_create = (""" CREATE TABLE IF NOT EXISTS songplay(
+songplay_table_create = (""" CREATE TABLE IF NOT EXISTS songplays(
 songplay_id BIGINT IDENTITY(0,1) PRIMARY KEY,
  start_time BIGINT NOT NULL, 
  user_id BIGINT NOT NULL, 
@@ -120,7 +120,7 @@ FORMAT AS json 'auto';
 
 # FINAL TABLES
 
-songplay_table_insert = (""" INSERT INTO songplay(
+songplay_table_insert = (""" INSERT INTO songplays(
  start_time, 
  user_id, 
  level, 
