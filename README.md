@@ -31,7 +31,7 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 The redshift database contains two staging tables s_events and s_songs that contains all the data extracted from the previous datasets.
 Then we have 4 dimensional table users, songs, artists and time and a fact table songplays.
 This is the ER schema of these tables:
-![alt text](https://user-images.githubusercontent.com/36500094/132131651-454ef6be-26b1-4ea6-aec4-3e92f40d2b61.png)
+<img width="570" alt="schema" src="https://user-images.githubusercontent.com/36500094/134797883-1e13cc7e-a855-427b-a996-05f933ca21d5.png">
 
 ### Project content
 The project consists of three python files and a configuration file:
